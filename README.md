@@ -9,6 +9,34 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## Usage
+
+```swift
+let segment = GpxTrackSegment()
+segment.add(point: GpxPoint(latitude: 0, longitude: 0))
+segment.add(point: GpxPoint(latitude: 1, longitude: 1))
+...
+
+let track = GpxTrack()
+track.name = "track name"
+track.add(segment: segment)
+
+let metadata = GpxMetadata()
+metadata.author = "luan-ma"
+metadata.name = "K2 hiking"
+
+let gpx = Gpx(creator: "Gpxer")
+gpx.metadata = metadata
+gpx.add(track: track)
+
+let xml = gpx.toXMLString()
+if let data = xml.data(using: .utf8) {
+    let fileUrl = FileManager.default.temporaryDirectory.appendingPathComponent(metadata.name).appendingPathExtension("gpx")
+    try data.write(to: fileUrl)
+    return fileUrl
+}
+```
+
 ## Requirements
 
 ## Installation
