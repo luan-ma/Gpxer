@@ -1,0 +1,6 @@
+use_frameworks!
+target 'Gpxer_Tests' do
+  pod 'Gpxer', :path => '../'
+  
+  
+end

@@ -1,0 +1,23 @@
+PODS:
+  - Gpxer (0.1.0):
+    - SwiftyXML (~> 2.0)
+  - SwiftyXML (2.0.0)
+
+DEPENDENCIES:
+  - Gpxer (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftyXML
+
+EXTERNAL SOURCES:
+  Gpxer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Gpxer: a2db88bfdcd6003e8aea120a3dd9fda03e2dae25
+  SwiftyXML: 332cbc28563e25303879777375dfbbd746b5ad2a
+
+PODFILE CHECKSUM: 4bdbaec279762638689ef4ec5e361551e5ac5b59
+
+COCOAPODS: 1.6.1
